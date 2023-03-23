@@ -6,6 +6,10 @@ TagManager:
   tags:
   - OneWay
   - Ice
+  - Enemy
+  - Decoration
+  - Platform
+  - Decor
   layers:
   - Default
   - TransparentFX

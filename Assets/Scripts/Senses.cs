@@ -1,7 +1,6 @@
-using System.Collections;
+
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using static UnityEngine.InputSystem.InputAction;
 
 public class Senses : MonoBehaviour
@@ -13,30 +12,35 @@ public class Senses : MonoBehaviour
     Color enemyColor = Color.red;
     Color decorationColor = Color.gray;
     Color defaultColor = Color.white;
-    List<Renderer> platformRenders = new List<Renderer>();
-    List<Renderer> enemyRenders = new List<Renderer>();
-    List<Renderer> decorationRenders = new List<Renderer>();
+    List<SpriteRenderer> platformRenders = new();
+    List<SpriteRenderer> enemyRenders = new();
+    List<SpriteRenderer> decorationRenders = new();
 
 
 
     // Start is called before the first frame update
     void Start()
     {
-        player = playerObject.GetComponent<Renderer>();
+        player = playerObject.GetComponent<SpriteRenderer>();
         GameObject[] platforms = GameObject.FindGameObjectsWithTag("Platform");
+        GameObject[] oneWays = GameObject.FindGameObjectsWithTag("OneWay");
         foreach (GameObject platform in platforms)
         {
-            platformRenders.Add(platform.GetComponent<Renderer>());
+            platformRenders.Add(platform.GetComponent<SpriteRenderer>());
+        }
+        foreach (GameObject oneWay in oneWays)
+        {
+            platformRenders.Add(oneWay.GetComponent<SpriteRenderer>());
         }
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
         foreach (GameObject enemy in enemies)
         {
-            enemyRenders.Add(enemy.GetComponent<Renderer>());
+            enemyRenders.Add(enemy.GetComponent<SpriteRenderer>());
         }
-        GameObject[] decorations = GameObject.FindGameObjectsWithTag("Decoration");
+        GameObject[] decorations = GameObject.FindGameObjectsWithTag("Decor");
         foreach (GameObject decoration in decorations)
         {
-            decorationRenders.Add(decoration.GetComponent<Renderer>());
+            decorationRenders.Add(decoration.GetComponent<SpriteRenderer>());
         }
 
 
