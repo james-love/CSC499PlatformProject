@@ -1,18 +1,17 @@
+using Cinemachine;
+using System.Collections;
 using UnityEngine;
 
 public class MainMenu : MonoBehaviour
 {
     [SerializeField] private GameObject graphics;
-
-    [SerializeField] private GameObject settingsMenu;
+    //[SerializeField] private CinemachineBrain camBrain;
 
     private Animator animator;
 
     public void QuitClicked()
     {
-        print("test");
-        ScreenCapture.CaptureScreenshot("C:\\Users\\vdy\\Desktop\\Ref.png");
-        //Application.Quit();
+        Application.Quit();
     }
 
     public void SettingsClicked()
@@ -27,12 +26,28 @@ public class MainMenu : MonoBehaviour
 
     public void GameClicked()
     {
-        animator.SetTrigger("GameClicked");
+        StartCoroutine(LoadGame());
     }
 
     private void Awake()
     {
         graphics.SetActive(true);
         animator = GetComponent<Animator>();
+    }
+
+    private IEnumerator LoadGame()
+    {
+        animator.SetTrigger("GameClicked");
+
+        yield return new WaitUntil(AnimationFinished);
+
+        //camBrain.enabled = true;
+        Time.timeScale = 1;
+    }
+
+    private bool AnimationFinished()
+    {
+        return animator.GetCurrentAnimatorStateInfo(0).IsName("OpenGame") &&
+            animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1;
     }
 }
