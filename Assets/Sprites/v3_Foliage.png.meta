@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6be51fb6289444db4b6dac2cbb53f9a7
+guid: 3dc786bc2e107442a85d432fed6e8ecc
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -120,10 +120,10 @@ TextureImporter:
       name: tree_02
       rect:
         serializedVersion: 2
-        x: 125
-        y: 2452
-        width: 1145
-        height: 1142
+        x: 118
+        y: 2846
+        width: 1282
+        height: 1278
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,8 +131,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ad2737c095d154b63bd89d5d9bb7e869
-      internalID: 1631312245
+      spriteID: ea0731617c64340a0a75eb88f67280dd
+      internalID: 1716001078
       vertices: []
       indices: 
       edges: []
@@ -141,10 +141,10 @@ TextureImporter:
       name: tree_01
       rect:
         serializedVersion: 2
-        x: 1450
-        y: 2475
-        width: 860
-        height: 1074
+        x: 1595
+        y: 2871
+        width: 964
+        height: 1203
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,20 +152,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 97cdde2718b034728b4f1dcae956dae1
-      internalID: 1063135202
+      spriteID: 3d95aa0da785b4f64850872e04765edc
+      internalID: 1813033673
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: building_top
+      name: bushes_01
       rect:
         serializedVersion: 2
-        x: 2367
-        y: 1663
-        width: 1853
-        height: 1619
+        x: 160
+        y: 2424
+        width: 2194
+        height: 407
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,20 +173,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1611ac96cb1a464d9bbec0ec2f25baa
-      internalID: -1246861446
+      spriteID: 0412465cf31d040678d150804b805476
+      internalID: -643840176
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bushes
+      name: bushes_02
       rect:
         serializedVersion: 2
-        x: 395
-        y: 1752
-        width: 1730
-        height: 307
+        x: 170
+        y: 1943
+        width: 2188
+        height: 383
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,20 +194,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d172aec18a3554f5d90dd69b903ca733
-      internalID: 1322597897
+      spriteID: d58c45e38cc12447e8cd359145f20e9e
+      internalID: 674549571
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: building_base
+      name: bushes_03
       rect:
         serializedVersion: 2
-        x: 419
-        y: 139
-        width: 1681
-        height: 1397
+        x: 139
+        y: 1421
+        width: 2282
+        height: 468
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,20 +215,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc99c57cd5f194cd7835329353cd84a8
-      internalID: -1244819268
+      spriteID: 81aa5a07e1a0b42a1b4245f1b82aaf6b
+      internalID: 1045613784
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: building_middle
+      name: potted_plant
       rect:
         serializedVersion: 2
-        x: 2439
-        y: 139
-        width: 1681
-        height: 1382
+        x: 219
+        y: 819
+        width: 430
+        height: 407
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -236,8 +236,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1824c058987a34966818f39ed24a14f6
-      internalID: 537447847
+      spriteID: 69320545b6e8941aebd1fbcab1fc6ad8
+      internalID: 1957586072
       vertices: []
       indices: 
       edges: []
@@ -253,12 +253,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      building_base: -1244819268
-      building_middle: 537447847
-      building_top: -1246861446
-      bushes: 1322597897
-      tree_01: 1063135202
-      tree_02: 1631312245
+      bushes_01: -643840176
+      bushes_02: 674549571
+      bushes_03: 1045613784
+      potted_plant: 1957586072
+      tree_01: 1813033673
+      tree_02: 1716001078
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
