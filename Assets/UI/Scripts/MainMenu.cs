@@ -1,14 +1,12 @@
-using Cinemachine;
 using System.Collections;
 using UnityEngine;
 
 public class MainMenu : MonoBehaviour
 {
     [SerializeField] private GameObject graphics;
-    //[SerializeField] private CinemachineBrain camBrain;
-
-    private Animator animator;
-
+    [SerializeField] private Animator openingCutscene;
+    private Animator mainMenuAnimator;
+    
     public void QuitClicked()
     {
         Application.Quit();
@@ -16,12 +14,12 @@ public class MainMenu : MonoBehaviour
 
     public void SettingsClicked()
     {
-        animator.SetTrigger("SettingsClicked");
+        mainMenuAnimator.SetTrigger("SettingsClicked");
     }
 
     public void BackClicked()
     {
-        animator.SetTrigger("BackToMenu");
+        mainMenuAnimator.SetTrigger("BackToMenu");
     }
 
     public void GameClicked()
@@ -32,22 +30,31 @@ public class MainMenu : MonoBehaviour
     private void Awake()
     {
         graphics.SetActive(true);
-        animator = GetComponent<Animator>();
+        mainMenuAnimator = GetComponent<Animator>();
     }
 
     private IEnumerator LoadGame()
     {
-        animator.SetTrigger("GameClicked");
+        mainMenuAnimator.SetTrigger("GameClicked");
 
-        yield return new WaitUntil(AnimationFinished);
+        yield return new WaitUntil(() => AnimationFinished(mainMenuAnimator, "OpenGame"));
 
-        //camBrain.enabled = true;
+        StartCoroutine(PlayCutscene());
+    }
+
+    private IEnumerator PlayCutscene()
+    {
+        openingCutscene.SetTrigger("StartCutscene");
+
+        yield return new WaitUntil(() => AnimationFinished(openingCutscene, "OpeningCutscene"));
+
+        Hearts.Instance.Visible = true;
         Time.timeScale = 1;
     }
 
-    private bool AnimationFinished()
+    private bool AnimationFinished(Animator animator, string animation)
     {
-        return animator.GetCurrentAnimatorStateInfo(0).IsName("OpenGame") &&
+        return animator.GetCurrentAnimatorStateInfo(0).IsName(animation) &&
             animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1;
     }
 }
