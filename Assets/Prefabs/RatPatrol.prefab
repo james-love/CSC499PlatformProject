@@ -67,6 +67,7 @@ MonoBehaviour:
   - {fileID: 5298422756653190272}
   - {fileID: 5298422757044820495}
   speed: 3
+  ratGraphic: {fileID: 0}
 --- !u!50 &5298422755794325529
 Rigidbody2D:
   serializedVersion: 4
