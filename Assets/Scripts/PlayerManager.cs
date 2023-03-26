@@ -2,13 +2,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Hearts : MonoBehaviour
+public class PlayerManager : MonoBehaviour
 {
-    public static Hearts Instance;
+    public static PlayerManager Instance;
 
     [SerializeField] private int maxHearts;
     [SerializeField] private int currentHearts;
-    [HideInInspector] public bool Visible;
+    [HideInInspector] public bool HeartsVisible;
 
 
     [SerializeField] private Sprite fullHeart;
@@ -17,9 +17,17 @@ public class Hearts : MonoBehaviour
     private List<Image> hearts = new();
     private Image heartContainer;
 
+    [HideInInspector] public bool AlwaysRun = false;
+
     public int AdjustHealth(int adjustment)
     {
         return currentHearts = Mathf.Clamp(currentHearts + adjustment, 0, maxHearts);
+    }
+
+    public void SetAlwaysRun(bool newValue)
+    {
+        AlwaysRun = newValue;
+        PlayerPrefs.SetInt("AlwaysRun", AlwaysRun ? 1 : 0);
     }
 
     private void Awake()
@@ -34,7 +42,10 @@ public class Hearts : MonoBehaviour
                 temp.rectTransform.position = new Vector3(temp.rectTransform.position.x + 175 + (125 * i), temp.rectTransform.position.y, temp.rectTransform.position.z);
                 hearts.Add(temp);
             }
-            Visible = false;
+
+            HeartsVisible = false;
+            if (PlayerPrefs.HasKey("AlwaysRun"))
+                AlwaysRun = PlayerPrefs.GetInt("AlwaysRun") == 1;
             Instance = this;
             DontDestroyOnLoad(gameObject);
         }
@@ -48,7 +59,7 @@ public class Hearts : MonoBehaviour
     {
         hearts.ForEach(heart =>
         {
-            if (!Visible)
+            if (!HeartsVisible)
             {
                 heart.enabled = false;
             }

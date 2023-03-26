@@ -30,7 +30,7 @@ public class Rat : MonoBehaviour
         if (collision.gameObject.CompareTag("Player") && coolDown == 5f)
         {
             coolDown = 0f;
-            Hearts.Instance.AdjustHealth(-1);
+            PlayerManager.Instance.AdjustHealth(-1);
         }
     }
 }
