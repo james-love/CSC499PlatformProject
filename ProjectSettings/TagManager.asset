@@ -10,6 +10,7 @@ TagManager:
   - Decoration
   - Platform
   - Decor
+  - Asset
   layers:
   - Default
   - TransparentFX

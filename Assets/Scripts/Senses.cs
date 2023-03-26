@@ -37,7 +37,7 @@ public class Senses : MonoBehaviour
         {
             enemyRenders.Add(enemy.GetComponent<SpriteRenderer>());
         }
-        GameObject[] decorations = GameObject.FindGameObjectsWithTag("Decor");
+        GameObject[] decorations = GameObject.FindGameObjectsWithTag("Decoration");
         foreach (GameObject decoration in decorations)
         {
             decorationRenders.Add(decoration.GetComponent<SpriteRenderer>());
