@@ -1,6 +1,7 @@
-
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using static UnityEngine.InputSystem.InputAction;
 
 public class Senses : MonoBehaviour
@@ -11,10 +12,14 @@ public class Senses : MonoBehaviour
     Color platformColor = Color.yellow;
     Color enemyColor = Color.red;
     Color decorationColor = Color.gray;
+    Color iceColor = Color.cyan;
+    Color onewayColor = Color.magenta;
     Color defaultColor = Color.white;
     List<SpriteRenderer> platformRenders = new();
     List<SpriteRenderer> enemyRenders = new();
     List<SpriteRenderer> decorationRenders = new();
+    List<SpriteRenderer> oneWayRenders = new();
+    List<SpriteRenderer> iceRenders = new();
 
 
 
@@ -23,14 +28,14 @@ public class Senses : MonoBehaviour
     {
         player = playerObject.GetComponent<SpriteRenderer>();
         GameObject[] platforms = GameObject.FindGameObjectsWithTag("Platform");
-        GameObject[] oneWays = GameObject.FindGameObjectsWithTag("OneWay");
         foreach (GameObject platform in platforms)
         {
             platformRenders.Add(platform.GetComponent<SpriteRenderer>());
         }
-        foreach (GameObject oneWay in oneWays)
+        GameObject[] oneways = GameObject.FindGameObjectsWithTag("OneWay");
+        foreach (GameObject one in oneways)
         {
-            platformRenders.Add(oneWay.GetComponent<SpriteRenderer>());
+            oneWayRenders.Add(one.GetComponent<SpriteRenderer>());
         }
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
         foreach (GameObject enemy in enemies)
@@ -42,6 +47,11 @@ public class Senses : MonoBehaviour
         {
             decorationRenders.Add(decoration.GetComponent<SpriteRenderer>());
         }
+        GameObject[] iceSpills = GameObject.FindGameObjectsWithTag("Ice");
+        foreach (GameObject ice in iceSpills)
+        {
+            iceRenders.Add(ice.GetComponent<SpriteRenderer>());
+        }
 
 
     }
@@ -49,7 +59,7 @@ public class Senses : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void JimmySense(CallbackContext context)
@@ -68,6 +78,14 @@ public class Senses : MonoBehaviour
             {
                 r.material.color = decorationColor;
             }
+            foreach (Renderer r in oneWayRenders)
+            {
+                r.material.color = onewayColor;
+            }
+            foreach (Renderer r in iceRenders)
+            {
+                r.material.color = iceColor;
+            }
             player.material.color = decorationColor;
 
         }
@@ -83,6 +101,14 @@ public class Senses : MonoBehaviour
                 r.material.color = defaultColor;
             }
             foreach (Renderer r in decorationRenders)
+            {
+                r.material.color = defaultColor;
+            }
+            foreach (Renderer r in oneWayRenders)
+            {
+                r.material.color = defaultColor;
+            }
+            foreach (Renderer r in iceRenders)
             {
                 r.material.color = defaultColor;
             }
