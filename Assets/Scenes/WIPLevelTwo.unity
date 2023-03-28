@@ -865,7 +865,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -4
   m_Sprite: {fileID: -1342664971, guid: 1fbb5c6ca59c84c9bab2696bc0047bf3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1117,7 +1117,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 75617888}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -73.60089, y: 7.2086186, z: -10}
+  m_LocalPosition: {x: -73.610725, y: 7.2086186, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2098,7 +2098,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -5
   m_Sprite: {fileID: -1342664971, guid: 1fbb5c6ca59c84c9bab2696bc0047bf3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2939,7 +2939,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -4
   m_Sprite: {fileID: -1342664971, guid: 1fbb5c6ca59c84c9bab2696bc0047bf3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4176,10 +4176,11 @@ GameObject:
   m_Component:
   - component: {fileID: 519354877}
   - component: {fileID: 519354879}
+  - component: {fileID: 519354880}
   - component: {fileID: 519354878}
   m_Layer: 7
   m_Name: stoveOn (3)
-  m_TagString: Platform
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4212,7 +4213,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 1.3474362}
+  m_Offset: {x: 0.000002861023, y: 1.5228627}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -4223,7 +4224,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.82, y: 0.8762558}
+  m_Size: {x: 4.7691374, y: 0.8762555}
   m_EdgeRadius: 0
 --- !u!212 &519354879
 SpriteRenderer:
@@ -4277,6 +4278,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &519354880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519354876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 372dfd2709e07e7438a561c589637839, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &525558591
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4566,7 +4579,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 3
   m_Sprite: {fileID: 246803087, guid: b2b4dc33cc0e74aa4a2d3a7760dc22f6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4880,7 +4893,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -5
   m_Sprite: {fileID: -1342664971, guid: 1fbb5c6ca59c84c9bab2696bc0047bf3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5319,10 +5332,11 @@ GameObject:
   m_Component:
   - component: {fileID: 650417881}
   - component: {fileID: 650417880}
+  - component: {fileID: 650417883}
   - component: {fileID: 650417882}
   m_Layer: 7
   m_Name: stoveOn
-  m_TagString: Platform
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5404,10 +5418,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 1.3474362}
+  m_Offset: {x: -0.0000009536743, y: 1.6304907}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -5418,8 +5432,20 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.82, y: 0.8762558}
+  m_Size: {x: 5.1909056, y: 0.9198024}
   m_EdgeRadius: 0
+--- !u!114 &650417883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650417879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 372dfd2709e07e7438a561c589637839, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &673873465
 GameObject:
   m_ObjectHideFlags: 0
@@ -5604,9 +5630,10 @@ GameObject:
   - component: {fileID: 694007766}
   - component: {fileID: 694007765}
   - component: {fileID: 694007767}
+  - component: {fileID: 694007768}
   m_Layer: 7
   m_Name: stoveOn (1)
-  m_TagString: Platform
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5688,10 +5715,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 1.3623847}
+  m_Offset: {x: 0.66181946, y: 1.536572}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -5702,8 +5729,20 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.82, y: 0.72676796}
+  m_Size: {x: 5.496361, y: 0.8138617}
   m_EdgeRadius: 0
+--- !u!114 &694007768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 694007764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 372dfd2709e07e7438a561c589637839, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &703202258
 GameObject:
   m_ObjectHideFlags: 0
@@ -6851,7 +6890,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -3
   m_Sprite: {fileID: -1342664971, guid: 1fbb5c6ca59c84c9bab2696bc0047bf3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -7238,7 +7277,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 862102067}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -73.60089, y: 7.2086186, z: -10}
+  m_LocalPosition: {x: -73.610725, y: 7.2086186, z: -10}
   m_LocalScale: {x: 1, y: 1.1375, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8124,10 +8163,11 @@ GameObject:
   m_Component:
   - component: {fileID: 994480070}
   - component: {fileID: 994480072}
+  - component: {fileID: 994480073}
   - component: {fileID: 994480071}
   m_Layer: 7
   m_Name: stoveOn (2)
-  m_TagString: Platform
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8160,7 +8200,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 1.3623847}
+  m_Offset: {x: 0.6006086, y: 1.5503417}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -8171,7 +8211,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.82, y: 0.72676796}
+  m_Size: {x: 5.6187825, y: 0.90219474}
   m_EdgeRadius: 0
 --- !u!212 &994480072
 SpriteRenderer:
@@ -8225,6 +8265,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &994480073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 994480069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 372dfd2709e07e7438a561c589637839, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &996890507 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5298422756497909013, guid: b9dc7d90f36d32a428c7ed1ab7d84fbe, type: 3}
@@ -9716,7 +9768,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -5
   m_Sprite: {fileID: -1342664971, guid: 1fbb5c6ca59c84c9bab2696bc0047bf3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -10805,10 +10857,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1219822857}
   - component: {fileID: 1219822856}
+  - component: {fileID: 1219822858}
   - component: {fileID: 1219822855}
   m_Layer: 7
   m_Name: stoveOn (1)
-  m_TagString: Platform
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10826,7 +10879,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 1.3623847}
+  m_Offset: {x: 0.12726927, y: 1.5365719}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -10837,7 +10890,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.82, y: 0.72676796}
+  m_Size: {x: 4.6309013, y: 0.90095496}
   m_EdgeRadius: 0
 --- !u!212 &1219822856
 SpriteRenderer:
@@ -10906,6 +10959,18 @@ Transform:
   m_Father: {fileID: 1654626512}
   m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1219822858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1219822854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 372dfd2709e07e7438a561c589637839, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1227812382
 GameObject:
   m_ObjectHideFlags: 0
@@ -11233,7 +11298,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -4
+  m_SortingOrder: -5
   m_Sprite: {fileID: -471924135, guid: 95327b49fffcf4d0f945e5d40282cb47, type: 3}
   m_Color: {r: 0.754717, g: 0.74403703, b: 0.74403703, a: 1}
   m_FlipX: 0
@@ -11397,7 +11462,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1255108637}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.29000092, y: 2.71, z: 0}
+  m_LocalPosition: {x: -1.77, y: 5.09, z: 0}
   m_LocalScale: {x: 0.40778065, y: 0.5408669, z: 0.64645}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11829,7 +11894,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 2
   m_Sprite: {fileID: -1980008455, guid: b2b4dc33cc0e74aa4a2d3a7760dc22f6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -12220,6 +12285,8 @@ MonoBehaviour:
   fullHeart: {fileID: 1122775400, guid: 2da954ccee593462c906a00f8cbbf4ec, type: 3}
   emptyHeart: {fileID: -1389968153, guid: 2da954ccee593462c906a00f8cbbf4ec, type: 3}
   AlwaysRun: 0
+  interactPopupContainer: {fileID: 0}
+  interactPopupText: {fileID: 0}
 --- !u!224 &1373485218
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12576,7 +12643,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1407739218}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.95, y: 0.27, z: 0}
   m_LocalScale: {x: 0.2666079, y: 0.48833084, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12649,7 +12716,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 6
   m_Sprite: {fileID: -738181792, guid: 051d82826118d474ba5d9873a5154854, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -16407,7 +16474,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: -1342664971, guid: 1fbb5c6ca59c84c9bab2696bc0047bf3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -17253,7 +17320,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -5
   m_Sprite: {fileID: -1342664971, guid: 1fbb5c6ca59c84c9bab2696bc0047bf3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -17731,7 +17798,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -4
   m_Sprite: {fileID: -1342664971, guid: 1fbb5c6ca59c84c9bab2696bc0047bf3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

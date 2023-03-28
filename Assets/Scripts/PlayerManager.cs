@@ -24,8 +24,14 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] private CanvasGroup interactPopupContainer;
     [SerializeField] private TextMeshProUGUI interactPopupText;
 
+    [SerializeField] private SimpleFlash flashEffect;
+
     public int AdjustHealth(int adjustment)
     {
+        if(adjustment < 0)
+        {
+            flashEffect.Flash();
+        }
         return currentHearts = Mathf.Clamp(currentHearts + adjustment, 0, maxHearts);
     }
 
