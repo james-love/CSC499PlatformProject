@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/LevelOne.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
+    path: Assets/Scenes/MergeLevelOne.unity
+    guid: ea0b6fc48323d81428485038acd13696
+  - enabled: 1
+    path: Assets/Scenes/WIPLevelTwo.unity
+    guid: 83b77ad08e0209e428ac596915f414f5
   m_configObjects: {}

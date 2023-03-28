@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5298422755794325532}
   - component: {fileID: 5298422755794325533}
   - component: {fileID: 5298422755794325529}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67,7 +67,6 @@ MonoBehaviour:
   - {fileID: 5298422756653190272}
   - {fileID: 5298422757044820495}
   speed: 3
-  ratGraphic: {fileID: 0}
 --- !u!50 &5298422755794325529
 Rigidbody2D:
   serializedVersion: 4

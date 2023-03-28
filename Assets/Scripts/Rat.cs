@@ -32,6 +32,13 @@ public class Rat : MonoBehaviour
             graphics.flipX = false;
     }
 
+    public void RatHit()
+    {
+        print("Rat Killed!");
+        //TODO: Death Animation
+        Destroy(gameObject);
+    }
+
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player") && coolDown == 5f)

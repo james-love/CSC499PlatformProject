@@ -1,12 +1,14 @@
 using System.Collections;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class MainMenu : MonoBehaviour
 {
-    [SerializeField] private GameObject graphics;
     [SerializeField] private Animator openingCutscene;
+    [SerializeField] private InputActionAsset inputs;
     private Animator mainMenuAnimator;
-    
+
     public void QuitClicked()
     {
         Application.Quit();
@@ -29,7 +31,6 @@ public class MainMenu : MonoBehaviour
 
     private void Awake()
     {
-        graphics.SetActive(true);
         mainMenuAnimator = GetComponent<Animator>();
     }
 
@@ -48,8 +49,9 @@ public class MainMenu : MonoBehaviour
 
         yield return new WaitUntil(() => AnimationFinished(openingCutscene, "OpeningCutscene"));
 
-        Hearts.Instance.Visible = true;
+        PlayerManager.Instance.HeartsVisible = true;
         Time.timeScale = 1;
+        inputs.actionMaps.First(m => m.name == "NormalMovement").Enable();
     }
 
     private bool AnimationFinished(Animator animator, string animation)

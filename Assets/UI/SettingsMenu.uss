@@ -1,0 +1,93 @@
+* {
+    --primary-color: rgb(171, 165, 255);
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.text {
+    font-size: 50px;
+    color: var(--primary-color);
+}
+
+.mute-buttons {
+    width: 100px;
+    height: 100px;
+    -unity-background-image-tint-color: var(--primary-color);
+}
+
+.volume-slider #unity-drag-container {
+    height: 100px;
+}
+
+.volume-slider #unity-dragger {
+    height: 100px;
+    width: 20px;
+}
+
+.volume-slider #unity-tracker {
+    height: 15px;
+    translate: 0 35px;
+}
+
+.margin-left {
+    margin-left: 40px;
+}
+
+.toggle #unity-checkmark {
+    width: 100px;
+    height: 100px;
+}
+
+.options-row {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+
+.rebind-control {
+    width: 50%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.rebind-control #Reset {
+    background-image: url('project://database/Assets/UI/reset.png?fileID=21300000&guid=a2c6f2f5ab02e964993ca6507826680d&type=3#reset');
+    width: 19%;
+    height: 100px;
+    -unity-background-image-tint-color: var(--primary-color);
+}
+
+.rebind-control #Rebind {
+    height: 100px;
+    width: 31%;
+    font-size: 45px;
+    color: var(--primary-color);
+}
+
+.rebind-control #LabelContainer {
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+}
+
+.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 140px;
+    color: rgba(0, 0, 0, 255);
+    -unity-text-align: middle-center;
+    background-color: rgba(106, 106, 106, 0.69);
+}

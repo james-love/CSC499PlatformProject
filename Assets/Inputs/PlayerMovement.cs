@@ -52,14 +52,16 @@ public class PlayerMovement : MonoBehaviour
     public bool IsJumping { get; private set; }
     public bool IsRunning { get; private set; } = false;
 
-    private float BaseAcceleration => IsRunning ? runAccelAmount : walkAccelAmount;
+    public bool IsModifiedRunning => PlayerManager.Instance.AlwaysRun ? !IsRunning : IsRunning;
+
+    private float BaseAcceleration => IsModifiedRunning ? runAccelAmount : walkAccelAmount;
     private float GroundAcceleration => onIce ? BaseAcceleration * accelOnIce : BaseAcceleration;
-    private float BaseDecceleration => IsRunning ? runDeccelAmount : walkDeccelAmount;
+    private float BaseDecceleration => IsModifiedRunning ? runDeccelAmount : walkDeccelAmount;
     private float GroundDecceleration => onIce ? BaseDecceleration * deccelOnIce : BaseDecceleration;
     private float Acceleration => lastOnGroundTime > 0 ? GroundAcceleration : GroundAcceleration * accelInAir;
     private float Decceleration => lastOnGroundTime > 0 ? GroundDecceleration : GroundDecceleration * deccelInAir;
 
-    private float MaxSpeed => IsRunning ? runMaxSpeed : walkMaxSpeed;
+    private float MaxSpeed => IsModifiedRunning ? runMaxSpeed : walkMaxSpeed;
 
     public void Move(CallbackContext context)
     {
