@@ -1,7 +1,10 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
+// TODO: Split into a player manager and a HUD manager
 public class PlayerManager : MonoBehaviour
 {
     public static PlayerManager Instance;
@@ -10,7 +13,6 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] private int currentHearts;
     [HideInInspector] public bool HeartsVisible;
 
-
     [SerializeField] private Sprite fullHeart;
     [SerializeField] private Sprite emptyHeart;
 
@@ -18,6 +20,9 @@ public class PlayerManager : MonoBehaviour
     private Image heartContainer;
 
     [HideInInspector] public bool AlwaysRun = false;
+
+    [SerializeField] private CanvasGroup interactPopupContainer;
+    [SerializeField] private TextMeshProUGUI interactPopupText;
 
     public int AdjustHealth(int adjustment)
     {
@@ -28,6 +33,17 @@ public class PlayerManager : MonoBehaviour
     {
         AlwaysRun = newValue;
         PlayerPrefs.SetInt("AlwaysRun", AlwaysRun ? 1 : 0);
+    }
+
+    public void SetInteractPopupVisibility(bool newValue)
+    {
+        interactPopupContainer.alpha = newValue ? 1f : 0f;
+    }
+
+    public void SetInteractPopupText(string newValue)
+    {
+        interactPopupText.SetText(newValue);
+        LayoutRebuilder.ForceRebuildLayoutImmediate(interactPopupContainer.GetComponent<RectTransform>());
     }
 
     private void Awake()
@@ -44,6 +60,7 @@ public class PlayerManager : MonoBehaviour
             }
 
             HeartsVisible = false;
+            SetInteractPopupVisibility(false);
             if (PlayerPrefs.HasKey("AlwaysRun"))
                 AlwaysRun = PlayerPrefs.GetInt("AlwaysRun") == 1;
             Instance = this;

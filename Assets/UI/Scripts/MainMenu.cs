@@ -50,6 +50,7 @@ public class MainMenu : MonoBehaviour
         yield return new WaitUntil(() => AnimationFinished(openingCutscene, "OpeningCutscene"));
 
         PlayerManager.Instance.HeartsVisible = true;
+        PlayerManager.Instance.SetInteractPopupText(inputs.FindAction("NormalMovement/Interact").bindings[0].ToDisplayString());
         Time.timeScale = 1;
         inputs.actionMaps.First(m => m.name == "NormalMovement").Enable();
     }
