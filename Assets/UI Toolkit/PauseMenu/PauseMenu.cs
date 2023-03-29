@@ -37,7 +37,7 @@ public class PauseMenu : MonoBehaviour
         });
 
         Button quit = root.Query<Button>("Quit");
-        mainMenu.RegisterCallback<ClickEvent>(_ => Application.Quit());
+        quit.RegisterCallback<ClickEvent>(_ => Application.Quit());
     }
 
     private void ToggleMusic()
