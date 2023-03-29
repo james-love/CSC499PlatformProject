@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 using static UnityEngine.InputSystem.InputAction;
@@ -32,7 +30,11 @@ public class PauseMenu : MonoBehaviour
         volumeSlider.RegisterValueChangedCallback(_ => SoundManager.Instance.SetVolume(_.newValue));
 
         Button mainMenu = root.Query<Button>("MainMenu");
-        mainMenu.RegisterCallback<ClickEvent>(_ => LevelManager.Instance.ReloadMainMenu());
+        mainMenu.RegisterCallback<ClickEvent>(_ =>
+        {
+            root.style.display = DisplayStyle.None;
+            LevelManager.Instance.ReloadMainMenu();
+        });
 
         Button quit = root.Query<Button>("Quit");
         mainMenu.RegisterCallback<ClickEvent>(_ => Application.Quit());

@@ -10,7 +10,7 @@ public class SimpleFlash : MonoBehaviour
 
     [Tooltip("Duration of the flash.")]
     [SerializeField] private float duration;
-
+    [SerializeField] private int timesToFlash = 6;
 
     // The SpriteRenderer that should flash.
     private SpriteRenderer spriteRenderer;
@@ -44,46 +44,28 @@ public class SimpleFlash : MonoBehaviour
         }
 
         // Start the Coroutine, and store the reference for it.
-        flashRoutine = StartCoroutine(FlashRoutine());
+        flashRoutine = StartCoroutine(FlashRoutine(timesToFlash));
     }
 
-    private IEnumerator FlashRoutine()
+    private IEnumerator FlashRoutine(int loop)
     {
-        // Swap to the flashMaterial.
-        spriteRenderer.material = flashMaterial;
+        if (loop == 0)
+            flashRoutine = null;
+        else
+        {
+            // Swap to the flashMaterial.
+            spriteRenderer.material = flashMaterial;
+            // Pause the execution of this function for "duration" seconds.
+            yield return new WaitForSeconds(duration);
 
-        // Pause the execution of this function for "duration" seconds.
-        yield return new WaitForSeconds(duration);
+            // After the pause, swap back to the original material.
+            spriteRenderer.material = originalMaterial;
 
-        // After the pause, swap back to the original material.
-        spriteRenderer.material = originalMaterial;
+            // Pause the execution of this function for "duration" seconds.
+            yield return new WaitForSeconds(duration);
 
-        // Pause the execution of this function for "duration" seconds.
-        yield return new WaitForSeconds(duration);
-
-        // Swap to the flashMaterial.
-        spriteRenderer.material = flashMaterial;
-
-        // Pause the execution of this function for "duration" seconds.
-        yield return new WaitForSeconds(duration);
-
-        // After the pause, swap back to the original material.
-        spriteRenderer.material = originalMaterial;
-
-        // Pause the execution of this function for "duration" seconds.
-        yield return new WaitForSeconds(duration);
-
-        // Swap to the flashMaterial.
-        spriteRenderer.material = flashMaterial;
-
-        // Pause the execution of this function for "duration" seconds.
-        yield return new WaitForSeconds(duration);
-
-        // After the pause, swap back to the original material.
-        spriteRenderer.material = originalMaterial;
-
-        // Set the routine to null, signaling that it's finished.
-        flashRoutine = null;
+            flashRoutine = StartCoroutine(FlashRoutine(--loop));
+        }
     }
 
 }

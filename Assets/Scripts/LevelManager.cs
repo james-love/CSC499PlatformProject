@@ -7,6 +7,7 @@ public class LevelManager : MonoBehaviour
     public static LevelManager Instance;
     [SerializeField] private Animator wipeTransition;
     [SerializeField] private Animator circleTransition;
+    [SerializeField] private RectTransform circleMask;
     public bool Loading { get; private set; }
 
     public void ReloadMainMenu()
@@ -19,6 +20,7 @@ public class LevelManager : MonoBehaviour
 
     public void LoadInterior()
     {
+        circleMask.anchoredPosition = Camera.main.WorldToScreenPoint(GameObject.FindGameObjectWithTag("Player").transform.position);
         LoadLevel(1, circleTransition);
     }
 
@@ -50,6 +52,10 @@ public class LevelManager : MonoBehaviour
         AsyncOperation operation = SceneManager.LoadSceneAsync(levelIndex);
         while (!operation.isDone)
             yield return null;
+
+        // Bad code, but w/e
+        if (transition == circleTransition)
+            circleMask.anchoredPosition = Camera.main.WorldToScreenPoint(GameObject.FindGameObjectWithTag("Player").transform.position);
 
         transition.SetTrigger("Loaded");
         Loading = false;

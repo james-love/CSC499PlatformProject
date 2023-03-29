@@ -1,8 +1,9 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
+using Image = UnityEngine.UI.Image;
 
 // TODO: Split into a player manager and a HUD manager
 public class PlayerManager : MonoBehaviour
@@ -24,15 +25,20 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] private CanvasGroup interactPopupContainer;
     [SerializeField] private TextMeshProUGUI interactPopupText;
 
-    [SerializeField] private SimpleFlash flashEffect;
+    [SerializeField] private UIDocument deathScreen;
 
     public int AdjustHealth(int adjustment)
     {
-        if(adjustment < 0)
+        currentHearts = Mathf.Clamp(currentHearts + adjustment, 0, maxHearts);
+
+        if (currentHearts == 0)
         {
-            flashEffect.Flash();
+            //TODO Death animation
+            Time.timeScale = 0;
+            deathScreen.rootVisualElement.style.display = DisplayStyle.Flex;
         }
-        return currentHearts = Mathf.Clamp(currentHearts + adjustment, 0, maxHearts);
+
+        return currentHearts;
     }
 
     public void SetAlwaysRun(bool newValue)
