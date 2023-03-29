@@ -17,13 +17,6 @@ public class LevelManager : MonoBehaviour
         LoadLevel(0, wipeTransition);
     }
 
-    public void ReloadGame()
-    {
-        // Need some logic here to skip the main menu
-
-        LoadLevel(0, wipeTransition);
-    }
-
     public void LoadInterior()
     {
         LoadLevel(1, circleTransition);
