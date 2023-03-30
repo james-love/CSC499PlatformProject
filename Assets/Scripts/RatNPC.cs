@@ -12,7 +12,6 @@ public class RatNPC : Interactable
 
     public override void Interact()
     {
-        print(dialogStep);
         if (dialogStep == dialog.Length)
         {
             Time.timeScale = 0;
