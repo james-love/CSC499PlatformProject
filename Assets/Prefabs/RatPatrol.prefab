@@ -67,6 +67,8 @@ MonoBehaviour:
   - {fileID: 5298422756653190272}
   - {fileID: 5298422757044820495}
   speed: 3
+  squeak: {fileID: 8300000, guid: 98edc210fd1bfa64da28dee0d419b862, type: 3}
+  hurt: {fileID: 8300000, guid: ceb82f7200e8fcf41b790373a2679a53, type: 3}
 --- !u!50 &5298422755794325529
 Rigidbody2D:
   serializedVersion: 4
@@ -99,7 +101,7 @@ GameObject:
   - component: {fileID: 5298422756497909013}
   m_Layer: 0
   m_Name: RatPatrol
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -111,7 +113,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5298422756497909002}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -16.78, y: -0.961, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -210,7 +212,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5298422757354930793}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.54, z: 0}
+  m_LocalPosition: {x: -0.12, y: -0.72, z: 0}
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -257,7 +259,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 9
   m_Sprite: {fileID: 1367988452, guid: d4d31aee38c23423bad904b167fcebba, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

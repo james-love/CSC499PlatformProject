@@ -4,6 +4,8 @@ public class Rat : MonoBehaviour
 {
     [SerializeField] private Transform[] waypoints;
     [SerializeField] private float speed;
+    [SerializeField] private AudioClip squeak;
+    [SerializeField] private AudioClip hurt;
 
     private Rigidbody2D rb;
     private int waypointIndex = 0;
@@ -36,6 +38,7 @@ public class Rat : MonoBehaviour
 
     public void RatHit()
     {
+        SoundManager.Instance.PlaySound(squeak);
         print("Rat Killed!");
         //TODO: Death Animation
         Destroy(gameObject);
@@ -45,6 +48,7 @@ public class Rat : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player") && coolDown == 5f)
         {
+            SoundManager.Instance.PlaySound(hurt);
             coolDown = 0f;
             collision.gameObject.GetComponentInChildren<SimpleFlash>().Flash();
             PlayerManager.Instance.AdjustHealth(-1);

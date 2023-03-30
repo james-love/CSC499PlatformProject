@@ -8,6 +8,8 @@ public class Attack : MonoBehaviour
     [SerializeField] private LayerMask enemyMask;
     [SerializeField] private float attackRange = 1.25f;
     [SerializeField] private float attackCooldown = 1.5f;
+    [SerializeField] private AudioClip hiss;
+    [SerializeField] private AudioClip swipe;
     private PlayerMovement playerMovement;
     private float timeSinceLastAttack;
     private void Awake()
@@ -25,6 +27,8 @@ public class Attack : MonoBehaviour
     {
         if (context.started && timeSinceLastAttack == attackCooldown)
         {
+            SoundManager.Instance.PlaySound(hiss);
+            SoundManager.Instance.PlaySound(swipe);
             timeSinceLastAttack = 0f;
             Collider2D hit = Physics2D.OverlapBox(new Vector2(transform.position.x + ((attackRange / 2f) * (playerMovement.IsFacingRight ? 1f : -1f)), transform.position.y), new Vector2(attackRange, 2f), 0, enemyMask);
             if (hit)

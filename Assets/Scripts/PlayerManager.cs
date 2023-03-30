@@ -27,6 +27,9 @@ public class PlayerManager : MonoBehaviour
 
     [SerializeField] private UIDocument deathScreen;
 
+
+    [SerializeField] private AudioClip death;
+
     public int AdjustHealth(int adjustment)
     {
         currentHearts = Mathf.Clamp(currentHearts + adjustment, 0, maxHearts);
@@ -35,6 +38,7 @@ public class PlayerManager : MonoBehaviour
         {
             //TODO Death animation
             Time.timeScale = 0;
+            SoundManager.Instance.PlaySound(death);
             deathScreen.rootVisualElement.style.display = DisplayStyle.Flex;
         }
 

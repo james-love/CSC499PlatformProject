@@ -23,6 +23,7 @@ public class Stove : MonoBehaviour
         if (collision.gameObject.CompareTag("Player") && coolDown == 5f)
         {
             coolDown = 0f;
+            collision.gameObject.GetComponentInChildren<SimpleFlash>().Flash();
             PlayerManager.Instance.AdjustHealth(-1);
             print("Player takes damage");
         }

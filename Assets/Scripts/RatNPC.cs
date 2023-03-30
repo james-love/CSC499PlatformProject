@@ -8,6 +8,8 @@ public class RatNPC : Interactable
     [SerializeField] private GameObject[] dialog;
 
     private int dialogStep = 0;
+    Color clearColor = Color.clear;
+    Color defaultColor = Color.white;
 
     private List<SpriteRenderer> dialogRenders = new();
 
@@ -27,6 +29,7 @@ public class RatNPC : Interactable
         {
             dialogRenders[dialogStep - 1].enabled = false;
             dialogRenders[dialogStep].enabled = true;
+            dialogStep += 1;
         }
     }
 
@@ -35,6 +38,7 @@ public class RatNPC : Interactable
         foreach (GameObject bubble in dialog)
         {
             dialogRenders.Add(bubble.GetComponent<SpriteRenderer>());
+            bubble.GetComponent<SpriteRenderer>().enabled = false;
         }
     }
 

@@ -7,6 +7,7 @@ public class MainMenu : MonoBehaviour
 {
     [SerializeField] private Animator openingCutscene;
     [SerializeField] private InputActionAsset inputs;
+    [SerializeField] private AudioClip music;
     private Animator mainMenuAnimator;
 
     public void QuitClicked()
@@ -31,6 +32,7 @@ public class MainMenu : MonoBehaviour
 
     private void Awake()
     {
+        SoundManager.Instance.PlayMusic(music);
         mainMenuAnimator = GetComponent<Animator>();
     }
 

@@ -8,6 +8,7 @@ public class Senses : MonoBehaviour
 {
     public GameObject playerObject;
     private Renderer player;
+    public AudioClip meow;
 
     Color platformColor = Color.yellow;
     Color enemyColor = Color.red;
@@ -66,6 +67,7 @@ public class Senses : MonoBehaviour
     {
         if (context.started)
         {
+            SoundManager.Instance.PlaySound(meow);
             foreach (Renderer r in platformRenders)
             {
                 r.material.color = platformColor;

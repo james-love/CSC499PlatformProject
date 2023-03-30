@@ -12208,6 +12208,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openingCutscene: {fileID: 1918674175}
   inputs: {fileID: -944628639613478452, guid: 8c0f2a41579b4914f8e3bb206b478cbe, type: 3}
+  music: {fileID: 8300000, guid: 050ce8814e8993e4e9b2ece9c778738a, type: 3}
 --- !u!4 &1364812952
 Transform:
   m_ObjectHideFlags: 0

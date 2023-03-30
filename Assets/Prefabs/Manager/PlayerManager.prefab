@@ -258,6 +258,7 @@ MonoBehaviour:
   interactPopupContainer: {fileID: 7527549770913623503}
   interactPopupText: {fileID: 7527549771022550553}
   deathScreen: {fileID: 7527549771296686877}
+  death: {fileID: 8300000, guid: fe3db00ae2dff424d94ca393324a671b, type: 3}
 --- !u!223 &7527549770621069125
 Canvas:
   m_ObjectHideFlags: 0
