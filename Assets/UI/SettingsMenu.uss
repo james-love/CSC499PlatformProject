@@ -9,17 +9,18 @@
     padding-right: 50px;
     padding-top: 50px;
     padding-bottom: 50px;
+    background-image: url('project://database/Assets/UI/Images/settings-background.png?fileID=21300000&guid=e1ca7e4716d03b047ba8e5584119e85c&type=3#settings-background');
 }
 
 .text {
     font-size: 50px;
-    color: var(--primary-color);
+    color: rgba(0, 0, 0, 255);
 }
 
 .mute-buttons {
     width: 100px;
     height: 100px;
-    -unity-background-image-tint-color: var(--primary-color);
+    -unity-background-image-tint-color: rgba(255, 255, 255, 255);
 }
 
 .volume-slider #unity-drag-container {
@@ -63,14 +64,14 @@
     background-image: url('project://database/Assets/UI/reset.png?fileID=21300000&guid=a2c6f2f5ab02e964993ca6507826680d&type=3#reset');
     width: 19%;
     height: 100px;
-    -unity-background-image-tint-color: var(--primary-color);
+    -unity-background-image-tint-color: rgba(255, 255, 255, 255);
 }
 
 .rebind-control #Rebind {
     height: 100px;
     width: 31%;
     font-size: 45px;
-    color: var(--primary-color);
+    color: rgba(255, 255, 255, 255);
 }
 
 .rebind-control #LabelContainer {
@@ -95,4 +96,12 @@
     padding-right: 80px;
     padding-top: 80px;
     padding-bottom: 80px;
+}
+
+.label-bg {
+    background-color: rgba(132, 132, 132, 0.57);
+}
+
+.clickable {
+    color: rgba(255, 255, 255, 255);
 }

@@ -2,7 +2,7 @@
     <Style src="project://database/Assets/UI/SettingsMenu.uss?fileID=7433441132597879392&amp;guid=ba3473219ac49b1409676a2c7c34c114&amp;type=3#SettingsMenu" />
     <ui:VisualElement name="Container" class="container">
         <ui:VisualElement name="TopRow" style="flex-direction: row;">
-            <ui:Button text="Back" display-tooltip-when-elided="true" name="BackButton" class="text" style="width: 160px; height: 100px;" />
+            <ui:Button text="Back" display-tooltip-when-elided="true" name="BackButton" class="text clickable" style="width: 160px; height: 100px;" />
             <ui:Button display-tooltip-when-elided="true" name="MuteMusic" class="mute-buttons margin-left" style="background-image: url(&apos;project://database/Assets/UI/mute-icons.png?fileID=-1806263028&amp;guid=5567ce8070b39bd419d523c2da9762fb&amp;type=3#music-muted&apos;);" />
             <ui:Button display-tooltip-when-elided="true" name="MuteSFX" class="mute-buttons margin-left" style="background-image: url(&apos;project://database/Assets/UI/mute-icons.png?fileID=-883351797&amp;guid=5567ce8070b39bd419d523c2da9762fb&amp;type=3#sfx-muted&apos;);" />
             <ui:Slider picking-mode="Ignore" value="0.5" high-value="1" name="VolumeControl" class="volume-slider margin-left" style="width: 300px; height: 100px; translate: 0 -33px;" />
@@ -10,19 +10,19 @@
         <ui:VisualElement name="BottomRow" style="flex-direction: row-reverse;">
             <ui:VisualElement name="PartialColumn" style="width: 60%;">
                 <ui:VisualElement name="Row01" class="options-row" style="justify-content: center;">
-                    <ui:Label text="Always Run?" display-tooltip-when-elided="true" class="text" style="height: 100px; -unity-text-align: middle-left;" />
+                    <ui:Label text="Always Run?" display-tooltip-when-elided="true" class="text label-bg" style="height: 100px; -unity-text-align: middle-left;" />
                     <ui:Toggle name="AlwaysRun" class="toggle margin-left" />
                 </ui:VisualElement>
                 <ui:VisualElement name="Row02" class="options-row">
                     <ui:VisualElement name="RebindLeft" class="rebind-control">
-                        <ui:VisualElement name="LabelContainer">
+                        <ui:VisualElement name="LabelContainer" class="label-bg">
                             <ui:Label text="Left" display-tooltip-when-elided="true" name="Label" class="text" />
                         </ui:VisualElement>
                         <ui:Button text="Space" display-tooltip-when-elided="true" name="Rebind" />
                         <ui:Button display-tooltip-when-elided="true" name="Reset" />
                     </ui:VisualElement>
                     <ui:VisualElement name="RebindRight" class="rebind-control">
-                        <ui:VisualElement name="LabelContainer">
+                        <ui:VisualElement name="LabelContainer" class="label-bg">
                             <ui:Label text="Right" display-tooltip-when-elided="true" name="Label" class="text" />
                         </ui:VisualElement>
                         <ui:Button text="Space" display-tooltip-when-elided="true" name="Rebind" />
@@ -31,14 +31,14 @@
                 </ui:VisualElement>
                 <ui:VisualElement name="Row03" class="options-row">
                     <ui:VisualElement name="RebindJump" class="rebind-control">
-                        <ui:VisualElement name="LabelContainer">
+                        <ui:VisualElement name="LabelContainer" class="label-bg">
                             <ui:Label text="Jump" display-tooltip-when-elided="true" name="Label" class="text" />
                         </ui:VisualElement>
                         <ui:Button text="Space" display-tooltip-when-elided="true" name="Rebind" />
                         <ui:Button display-tooltip-when-elided="true" name="Reset" />
                     </ui:VisualElement>
                     <ui:VisualElement name="RebindRun" class="rebind-control">
-                        <ui:VisualElement name="LabelContainer">
+                        <ui:VisualElement name="LabelContainer" class="label-bg">
                             <ui:Label text="Run" display-tooltip-when-elided="true" name="Label" class="text" />
                         </ui:VisualElement>
                         <ui:Button text="Space" display-tooltip-when-elided="true" name="Rebind" />
@@ -47,14 +47,14 @@
                 </ui:VisualElement>
                 <ui:VisualElement name="Row04" class="options-row">
                     <ui:VisualElement name="RebindSense" class="rebind-control">
-                        <ui:VisualElement name="LabelContainer">
+                        <ui:VisualElement name="LabelContainer" class="label-bg">
                             <ui:Label text="Sense" display-tooltip-when-elided="true" name="Label" class="text" />
                         </ui:VisualElement>
                         <ui:Button text="Space" display-tooltip-when-elided="true" name="Rebind" />
                         <ui:Button display-tooltip-when-elided="true" name="Reset" />
                     </ui:VisualElement>
                     <ui:VisualElement name="RebindDropDown" class="rebind-control">
-                        <ui:VisualElement name="LabelContainer">
+                        <ui:VisualElement name="LabelContainer" class="label-bg">
                             <ui:Label text="Drop Down" display-tooltip-when-elided="true" name="Label" class="text" />
                         </ui:VisualElement>
                         <ui:Button text="Space" display-tooltip-when-elided="true" name="Rebind" />
@@ -63,14 +63,14 @@
                 </ui:VisualElement>
                 <ui:VisualElement name="Row05" class="options-row">
                     <ui:VisualElement name="RebindAttack" class="rebind-control">
-                        <ui:VisualElement name="LabelContainer">
+                        <ui:VisualElement name="LabelContainer" class="label-bg">
                             <ui:Label text="Attack" display-tooltip-when-elided="true" name="Label" class="text" />
                         </ui:VisualElement>
                         <ui:Button text="Space" display-tooltip-when-elided="true" name="Rebind" />
                         <ui:Button display-tooltip-when-elided="true" name="Reset" />
                     </ui:VisualElement>
                     <ui:VisualElement name="RebindInteract" class="rebind-control">
-                        <ui:VisualElement name="LabelContainer">
+                        <ui:VisualElement name="LabelContainer" class="label-bg">
                             <ui:Label text="Interact" display-tooltip-when-elided="true" name="Label" class="text" />
                         </ui:VisualElement>
                         <ui:Button text="Space" display-tooltip-when-elided="true" name="Rebind" />
