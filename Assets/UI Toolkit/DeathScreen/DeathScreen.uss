@@ -7,11 +7,15 @@
 
 .text {
     font-size: 140px;
+    -unity-font: url('project://database/Assets/Fonts/Bases/Singkong.otf?fileID=12800000&guid=78b2335cd27c6446aadebee5baf60fd8&type=3#Singkong');
+    -unity-font-definition: url('project://database/Assets/Fonts/Bases/Singkong%20SDF.asset?fileID=11400000&guid=7bf1f89e1b6789b4788d4dbb46f58adc&type=2#Singkong SDF');
 }
 
 .button {
-    font-size: 51px;
+    font-size: 63px;
     height: 100px;
     width: 322px;
     margin-top: 49px;
+    -unity-font: url('project://database/Assets/Fonts/Bases/Singkong.otf?fileID=12800000&guid=78b2335cd27c6446aadebee5baf60fd8&type=3#Singkong');
+    -unity-font-definition: url('project://database/Assets/Fonts/Bases/Singkong%20SDF.asset?fileID=11400000&guid=7bf1f89e1b6789b4788d4dbb46f58adc&type=2#Singkong SDF');
 }

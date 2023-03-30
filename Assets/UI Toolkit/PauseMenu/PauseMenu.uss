@@ -8,6 +8,8 @@
 .text {
     font-size: 150px;
     color: rgb(255, 255, 255);
+    -unity-font-definition: url('project://database/Assets/Fonts/Bases/Singkong%20SDF.asset?fileID=11400000&guid=7bf1f89e1b6789b4788d4dbb46f58adc&type=2#Singkong SDF');
+    -unity-font: url('project://database/Assets/Fonts/Bases/Singkong.otf?fileID=12800000&guid=78b2335cd27c6446aadebee5baf60fd8&type=3#Singkong');
 }
 
 .button {
@@ -58,4 +60,6 @@
     width: 460px;
     margin-top: 25px;
     height: 115px;
+    -unity-font: url('project://database/Assets/Fonts/Bases/Singkong.otf?fileID=12800000&guid=78b2335cd27c6446aadebee5baf60fd8&type=3#Singkong');
+    -unity-font-definition: url('project://database/Assets/Fonts/Bases/Singkong%20SDF.asset?fileID=11400000&guid=7bf1f89e1b6789b4788d4dbb46f58adc&type=2#Singkong SDF');
 }
