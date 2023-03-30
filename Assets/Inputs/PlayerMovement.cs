@@ -70,7 +70,8 @@ public class PlayerMovement : MonoBehaviour
         if (context.started)
         {
             inputDirection = context.ReadValue<float>();
-            playerSprite.flipX = inputDirection < 0;
+            if (Time.timeScale != 0)
+                playerSprite.flipX = inputDirection < 0;
         }
         else if (context.canceled)
         {
@@ -125,13 +126,13 @@ public class PlayerMovement : MonoBehaviour
         GroundedCheck();
         JumpCheck();
         GravityCheck();
-
-        playerAnim.SetBool("Running", IsModifiedRunning && inputDirection != 0f);
-        playerAnim.SetBool("Moving", inputDirection != 0f);
     }
 
     private void FixedUpdate()
     {
+        playerAnim.SetBool("Running", IsModifiedRunning && inputDirection != 0f);
+        playerAnim.SetBool("Moving", inputDirection != 0f);
+
         float targetSpeed = inputDirection * MaxSpeed;
         targetSpeed = Mathf.Lerp(rb.velocity.x, targetSpeed, 1f);
 
