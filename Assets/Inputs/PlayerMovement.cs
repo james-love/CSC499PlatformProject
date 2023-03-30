@@ -185,6 +185,14 @@ public class PlayerMovement : MonoBehaviour
                 onIce = true;
             else
                 onIce = false;
+
+
+            playerAnim.SetBool("Grounded", true);
+        }
+        else
+        {
+
+            playerAnim.SetBool("Grounded", false);
         }
     }
 
@@ -194,6 +202,7 @@ public class PlayerMovement : MonoBehaviour
         {
             IsJumping = false;
             isJumpDescent = true;
+            playerAnim.SetTrigger("JumpApex");
         }
 
         if (lastOnGroundTime > 0 && !IsJumping)
@@ -217,6 +226,7 @@ public class PlayerMovement : MonoBehaviour
                 force -= rb.velocity.y;
 
             rb.AddForce(Vector2.up * force, ForceMode2D.Impulse);
+            playerAnim.SetTrigger("Jump");
         }
     }
 
