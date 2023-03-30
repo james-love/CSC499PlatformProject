@@ -113,6 +113,18 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -124,8 +136,8 @@ TextureImporter:
         y: 2919
         width: 638
         height: 698
-      alignment: 9
-      pivot: {x: 0.15983902, y: 0.015912862}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -145,8 +157,8 @@ TextureImporter:
         y: 2915
         width: 640
         height: 694
-      alignment: 9
-      pivot: {x: 0.15945205, y: 0.019269872}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -166,8 +178,8 @@ TextureImporter:
         y: 2914
         width: 638
         height: 689
-      alignment: 9
-      pivot: {x: 0.15633686, y: 0.016023634}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -187,8 +199,8 @@ TextureImporter:
         y: 1777
         width: 640
         height: 698
-      alignment: 9
-      pivot: {x: 0.1700285, y: 0.018073052}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -204,12 +216,12 @@ TextureImporter:
       name: jimmyLook_02
       rect:
         serializedVersion: 2
-        x: 857
+        x: 863
         y: 1779
         width: 640
         height: 694
-      alignment: 9
-      pivot: {x: 0.14804201, y: 0.014199908}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -229,8 +241,8 @@ TextureImporter:
         y: 1777
         width: 640
         height: 692
-      alignment: 9
-      pivot: {x: 0.14804211, y: 0.018310195}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -250,8 +262,8 @@ TextureImporter:
         y: 1779
         width: 640
         height: 690
-      alignment: 9
-      pivot: {x: 0.16124038, y: 0.014282227}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -271,8 +283,8 @@ TextureImporter:
         y: 1776
         width: 638
         height: 684
-      alignment: 9
-      pivot: {x: 0.157972, y: 0.018524349}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -288,12 +300,12 @@ TextureImporter:
       name: jimmyMoves_01
       rect:
         serializedVersion: 2
-        x: 126
-        y: 963
-        width: 638
+        x: 170
+        y: 957
+        width: 594
         height: 692
-      alignment: 9
-      pivot: {x: 0.157972, y: 0.028482426}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -309,12 +321,12 @@ TextureImporter:
       name: jimmyMoves_02
       rect:
         serializedVersion: 2
-        x: 893
+        x: 1008
         y: 963
-        width: 652
+        width: 537
         height: 654
-      alignment: 9
-      pivot: {x: 0.15667912, y: 0.032289837}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -330,12 +342,12 @@ TextureImporter:
       name: jimmyMoves_03
       rect:
         serializedVersion: 2
-        x: 1676
-        y: 889
-        width: 765
+        x: 1877
+        y: 883
+        width: 564
         height: 691
-      alignment: 9
-      pivot: {x: 0.13377964, y: 0.14057942}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -351,12 +363,12 @@ TextureImporter:
       name: jimmyMoves_04
       rect:
         serializedVersion: 2
-        x: 2572
+        x: 2861
         y: 837
-        width: 789
+        width: 500
         height: 631
-      alignment: 9
-      pivot: {x: 0.12906034, y: 0.23553342}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -372,12 +384,12 @@ TextureImporter:
       name: jimmyMoves_05
       rect:
         serializedVersion: 2
-        x: 3388
-        y: 837
-        width: 746
-        height: 657
-      alignment: 9
-      pivot: {x: 0.13731961, y: 0.22781758}
+        x: 3714
+        y: 838
+        width: 425
+        height: 653
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

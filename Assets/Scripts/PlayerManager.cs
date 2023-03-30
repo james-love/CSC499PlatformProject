@@ -94,6 +94,7 @@ public class PlayerManager : MonoBehaviour
             SetInteractPopupVisibility(false);
             if (PlayerPrefs.HasKey("AlwaysRun"))
                 AlwaysRun = PlayerPrefs.GetInt("AlwaysRun") == 1;
+            GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<PlayerInput>().currentActionMap.Disable();
             Instance = this;
             DontDestroyOnLoad(gameObject);
         }

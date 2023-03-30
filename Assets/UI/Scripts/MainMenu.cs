@@ -49,12 +49,18 @@ public class MainMenu : MonoBehaviour
     {
         openingCutscene.SetTrigger("StartCutscene");
 
+        Time.timeScale = 1;
+
         yield return new WaitUntil(() => AnimationFinished(openingCutscene, "OpeningCutscene"));
+
+        openingCutscene.SetTrigger("MoveCamera");
+        GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Animator>().SetTrigger("StandUp");
+
+        yield return new WaitUntil(() => AnimationFinished(openingCutscene, "MoveCamera"));
 
         PlayerManager.Instance.HeartsVisible = true;
         PlayerManager.Instance.SetInteractPopupText(inputs.FindAction("NormalMovement/Interact").bindings[0].ToDisplayString());
-        Time.timeScale = 1;
-        inputs.actionMaps.First(m => m.name == "NormalMovement").Enable();
+        GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<PlayerInput>().currentActionMap.Enable();
     }
 
     private bool AnimationFinished(Animator animator, string animation)
