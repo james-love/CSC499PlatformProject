@@ -5,6 +5,8 @@ using UnityEngine;
 public class Stove : MonoBehaviour
 {
 
+    [SerializeField] private AudioClip hurt;
+
     private float coolDown = 3f;
     // Start is called before the first frame update
     void Start()
@@ -22,6 +24,7 @@ public class Stove : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player") && coolDown == 5f)
         {
+            SoundManager.Instance.PlaySound(hurt);
             coolDown = 0f;
             collision.gameObject.GetComponentInChildren<SimpleFlash>().Flash();
             PlayerManager.Instance.AdjustHealth(-1);
