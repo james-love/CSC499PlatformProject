@@ -1,0 +1,443 @@
+fileFormatVersion: 2
+guid: 38c24c42476d14f6f81e57cd1bf92961
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: jumpPrep_01
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 1189
+        width: 422
+        height: 654
+      alignment: 9
+      pivot: {x: 0.5, y: 0.003907183}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a68d58ef5e1424223bef84adc3f98eec
+      internalID: 922932468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jumpPrep02
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 1186
+        width: 442
+        height: 627
+      alignment: 9
+      pivot: {x: 0.39593616, y: 0.012226501}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9175ff091713c4b47bd633d1fc1f1cca
+      internalID: 1492649016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jumpPrep03
+      rect:
+        serializedVersion: 2
+        x: 1214
+        y: 1189
+        width: 483
+        height: 544
+      alignment: 9
+      pivot: {x: 0.4100602, y: 0.011477975}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0ca44ca7f93b49f890b91149e04fd4c
+      internalID: 1075253679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump_rise
+      rect:
+        serializedVersion: 2
+        x: 1841
+        y: 1189
+        width: 304
+        height: 754
+      alignment: 9
+      pivot: {x: 0.42434853, y: 0.011976652}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e37a0a1bb79fc4dbd8cae976eea9b4d1
+      internalID: -1152065590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rise_01
+      rect:
+        serializedVersion: 2
+        x: 2284
+        y: 1192
+        width: 304
+        height: 763
+      alignment: 9
+      pivot: {x: 0.3995795, y: 0.0064598075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b15f29c75fa9e444994f6df20096ecbf
+      internalID: 1891974143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rise_02
+      rect:
+        serializedVersion: 2
+        x: 2735
+        y: 1189
+        width: 325
+        height: 765
+      alignment: 9
+      pivot: {x: 0.44471154, y: 0.010054445}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b58178bb6b86b432f8bc243bffee34dc
+      internalID: 1871727661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: apex
+      rect:
+        serializedVersion: 2
+        x: 3203
+        y: 1189
+        width: 334
+        height: 746
+      alignment: 9
+      pivot: {x: 0.35205153, y: 0.01191871}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be6cf3b7d0cf140b48dbabb9e8f8fc5c
+      internalID: -2016660248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jimmyJump_7
+      rect:
+        serializedVersion: 2
+        x: 3681
+        y: 1189
+        width: 389
+        height: 731
+      alignment: 9
+      pivot: {x: 0.39971343, y: 0.005461102}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c6e058d96f5a40b29e1b441321d1aa1
+      internalID: 1358942328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fall_01
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 164
+        width: 544
+        height: 698
+      alignment: 9
+      pivot: {x: 0.41394496, y: 0.015614507}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3481c5d6722b3413985d2110dc71e947
+      internalID: -320275464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fall_02
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 161
+        width: 543
+        height: 694
+      alignment: 9
+      pivot: {x: 0.41857573, y: 0.009859904}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84aca0512950b4b9dbb3383bd09fb850
+      internalID: -236260978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fall_03
+      rect:
+        serializedVersion: 2
+        x: 1544
+        y: 164
+        width: 542
+        height: 685
+      alignment: 9
+      pivot: {x: 0.4127355, y: 0.013309406}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c10ab634d10384be799b87fb8b7131b8
+      internalID: 317941018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: land_01
+      rect:
+        serializedVersion: 2
+        x: 2228
+        y: 164
+        width: 486
+        height: 544
+      alignment: 9
+      pivot: {x: 0.42508048, y: 0.016133925}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27aa181810bf4459c986124e6d7d6170
+      internalID: -596956063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: land_02
+      rect:
+        serializedVersion: 2
+        x: 2856
+        y: 164
+        width: 442
+        height: 629
+      alignment: 9
+      pivot: {x: 0.39408606, y: 0.007961352}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19196443fbaeb43258ce5d635c269420
+      internalID: 1118320694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: land_03
+      rect:
+        serializedVersion: 2
+        x: 3435
+        y: 164
+        width: 412
+        height: 677
+      alignment: 9
+      pivot: {x: 0.4936873, y: 0.012114532}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9647d612fca874aafa5b86a682afdd61
+      internalID: -89047183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      apex: -2016660248
+      fall_01: -320275464
+      fall_02: -236260978
+      fall_03: 317941018
+      jimmyJump_7: 1358942328
+      jumpPrep02: 1492649016
+      jumpPrep03: 1075253679
+      jumpPrep_01: 922932468
+      jump_rise: -1152065590
+      land_01: -596956063
+      land_02: 1118320694
+      land_03: -89047183
+      rise_01: 1891974143
+      rise_02: 1871727661
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
