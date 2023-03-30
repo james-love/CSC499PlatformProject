@@ -5,6 +5,7 @@ using static UnityEngine.InputSystem.InputAction;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [SerializeField] private bool skipIntro = false;
     [SerializeField] private float jumpHeight = 3.5f;
     [SerializeField] private float timeToApex = 0.3f;
     [SerializeField] private float coyoteTime = 0.1f;
@@ -101,6 +102,9 @@ public class PlayerMovement : MonoBehaviour
         col = GetComponent<CircleCollider2D>();
         playerAnim = GetComponentInChildren<Animator>();
         playerSprite = GetComponentInChildren<SpriteRenderer>();
+
+        if (skipIntro)
+            playerAnim.SetTrigger("SkipIntro");
 
         float gravityStrength = -(2 * jumpHeight) / (timeToApex * timeToApex);
         gravityScale = gravityStrength / Physics2D.gravity.y;

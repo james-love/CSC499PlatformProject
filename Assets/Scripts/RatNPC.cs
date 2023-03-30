@@ -1,27 +1,33 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.UIElements;
 
 public class RatNPC : Interactable
 {
     [SerializeField] private GameObject[] dialog;
+    [SerializeField] private PlayerInput playerInput;
 
     private int dialogStep = 0;
-    Color clearColor = Color.clear;
-    Color defaultColor = Color.white;
-
-    private List<SpriteRenderer> dialogRenders = new();
+    private VisualElement root;
 
     public override void Interact()
     {
-        if(dialogStep == dialogRenders.Count)
+        print(dialogStep);
+        if (dialogStep == dialog.Length)
         {
-            print("End of game");
+            Time.timeScale = 0;
+            playerInput.currentActionMap.Disable();
+            root.style.display = DisplayStyle.Flex;
         }
-
-        if(dialogStep == 0)
+        else if (dialogStep == 0)
         {
+            playerInput.currentActionMap.FindAction("Move").Disable();
+            playerInput.currentActionMap.FindAction("Jump").Disable();
+            playerInput.currentActionMap.FindAction("Run").Disable();
+            playerInput.currentActionMap.FindAction("Sense").Disable();
+            playerInput.currentActionMap.FindAction("DropDown").Disable();
+            playerInput.currentActionMap.FindAction("Attack").Disable();
+
             dialog[0].SetActive(true);
             dialogStep += 1;
         }
@@ -33,16 +39,12 @@ public class RatNPC : Interactable
         }
     }
 
-    void Start()
+    private void Start()
     {
+        root = GetComponent<UIDocument>().rootVisualElement;
         foreach (GameObject bubble in dialog)
         {
             bubble.SetActive(false);
         }
-    }
-
-    void Update()
-    {
-        
     }
 }

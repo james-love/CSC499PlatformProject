@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/EndScreen/EndScreen.uss?fileID=7433441132597879392&amp;guid=67822bdd27234c943b2f2d5dcf9768b9&amp;type=3#EndScreen" />
+    <ui:VisualElement name="Container" class="container">
+        <ui:Label text="You Won!" display-tooltip-when-elided="true" class="text victory-text" style="-unity-font-definition: url(&apos;project://database/Assets/Fonts/Bases/Singkong%20SDF.asset?fileID=11400000&amp;guid=7bf1f89e1b6789b4788d4dbb46f58adc&amp;type=2#Singkong SDF&apos;); -unity-font: url(&apos;project://database/Assets/Fonts/Bases/Singkong.otf?fileID=12800000&amp;guid=78b2335cd27c6446aadebee5baf60fd8&amp;type=3#Singkong&apos;); font-size: 140px;" />
+        <ui:Button text="Main Menu" display-tooltip-when-elided="true" name="MainMenu" class="text button" />
+        <ui:Button text="Quit" display-tooltip-when-elided="true" name="Quit" class="text button" />
+    </ui:VisualElement>
+    <ui:Label text="...to be continued?" display-tooltip-when-elided="true" class="text" style="position: absolute; right: 27px; bottom: 11px; -unity-font: url(&apos;project://database/Assets/Fonts/Bases/Singkong.otf?fileID=12800000&amp;guid=78b2335cd27c6446aadebee5baf60fd8&amp;type=3#Singkong&apos;); -unity-font-definition: url(&apos;project://database/Assets/Fonts/Bases/Singkong%20SDF.asset?fileID=11400000&amp;guid=7bf1f89e1b6789b4788d4dbb46f58adc&amp;type=2#Singkong SDF&apos;);" />
+</ui:UXML>

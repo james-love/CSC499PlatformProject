@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class TEMPTIMESCALEFIXSCRIPT : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class TEMPTIMESCALEFIXSCRIPT : MonoBehaviour
     void Start()
     {
         Time.timeScale = 1;
+        GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<PlayerInput>().currentActionMap.Enable();
     }
 
     // Update is called once per frame
