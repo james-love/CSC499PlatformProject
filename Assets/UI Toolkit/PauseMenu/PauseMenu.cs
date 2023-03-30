@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
 using static UnityEngine.InputSystem.InputAction;
 
@@ -38,6 +39,11 @@ public class PauseMenu : MonoBehaviour
 
         Button quit = root.Query<Button>("Quit");
         quit.RegisterCallback<ClickEvent>(_ => Application.Quit());
+    }
+
+    private void Start()
+    {
+        GetComponent<PlayerInput>().currentActionMap.FindAction("Pause").Enable();
     }
 
     private void ToggleMusic()

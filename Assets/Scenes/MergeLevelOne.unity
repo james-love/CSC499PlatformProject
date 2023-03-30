@@ -20683,10 +20683,6 @@ PrefabInstance:
       propertyPath: playerObject
       value: 
       objectReference: {fileID: 749398582}
-    - target: {fileID: 3966947732540517418, guid: 5ef34e7942f3b6d46b5f80afaa284c4f, type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
     - target: {fileID: 6635558785749205930, guid: 5ef34e7942f3b6d46b5f80afaa284c4f, type: 3}
       propertyPath: m_Name
       value: Player
@@ -23859,10 +23855,6 @@ PrefabInstance:
     - target: {fileID: 7799491535339628244, guid: da6579dd0229cb64b9052b41a74d1b57, type: 3}
       propertyPath: m_Name
       value: LevelManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 7799491535339628244, guid: da6579dd0229cb64b9052b41a74d1b57, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7799491535339628245, guid: da6579dd0229cb64b9052b41a74d1b57, type: 3}
       propertyPath: m_RootOrder
