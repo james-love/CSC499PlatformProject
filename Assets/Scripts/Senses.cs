@@ -1,7 +1,5 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using static UnityEngine.InputSystem.InputAction;
 
 public class Senses : MonoBehaviour
@@ -22,10 +20,7 @@ public class Senses : MonoBehaviour
     List<SpriteRenderer> oneWayRenders = new();
     List<SpriteRenderer> iceRenders = new();
 
-
-
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         player = playerObject.GetComponent<SpriteRenderer>();
         GameObject[] platforms = GameObject.FindGameObjectsWithTag("Platform");
@@ -57,10 +52,13 @@ public class Senses : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
+    private void SetColor(List<SpriteRenderer> renderers, Color color)
     {
-
+        renderers.ForEach(r =>
+        {
+            if (r != null)
+                r.material.color = color;
+        });
     }
 
     public void JimmySense(CallbackContext context)
@@ -68,52 +66,20 @@ public class Senses : MonoBehaviour
         if (context.started)
         {
             SoundManager.Instance.PlaySound(meow);
-            foreach (Renderer r in platformRenders)
-            {
-                r.material.color = platformColor;
-            }
-            foreach (Renderer r in enemyRenders)
-            {
-                r.material.color = enemyColor;
-            }
-            foreach (Renderer r in decorationRenders)
-            {
-                r.material.color = decorationColor;
-            }
-            foreach (Renderer r in oneWayRenders)
-            {
-                r.material.color = onewayColor;
-            }
-            foreach (Renderer r in iceRenders)
-            {
-                r.material.color = iceColor;
-            }
+            SetColor(platformRenders, platformColor);
+            SetColor(enemyRenders, enemyColor);
+            SetColor(decorationRenders, decorationColor);
+            SetColor(oneWayRenders, onewayColor);
+            SetColor(iceRenders, iceColor);
             player.material.color = decorationColor;
-
         }
-
         else if (context.canceled)
         {
-            foreach (Renderer r in platformRenders)
-            {
-                r.material.color = defaultColor;
-            }
-            foreach (Renderer r in enemyRenders)
-            {
-                r.material.color = defaultColor;
-            }
-            foreach (Renderer r in decorationRenders)
-            {
-                r.material.color = defaultColor;
-            }
-            foreach (Renderer r in oneWayRenders)
-            {
-                r.material.color = defaultColor;
-            }
-            foreach (Renderer r in iceRenders)
-            {
-                r.material.color = defaultColor;
-            }
+            SetColor(platformRenders, defaultColor);
+            SetColor(enemyRenders, defaultColor);
+            SetColor(decorationRenders, defaultColor);
+            SetColor(oneWayRenders, defaultColor);
+            SetColor(iceRenders, defaultColor);
             player.material.color = defaultColor;
         }
     }
