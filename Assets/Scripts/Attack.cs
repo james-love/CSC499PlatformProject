@@ -12,10 +12,12 @@ public class Attack : MonoBehaviour
     [SerializeField] private AudioClip swipe;
     private PlayerMovement playerMovement;
     private float timeSinceLastAttack;
+    private Animator playerAnim;
     private void Awake()
     {
         playerMovement = GetComponent<PlayerMovement>();
         timeSinceLastAttack = attackCooldown;
+        playerAnim = GetComponentInChildren<Animator>();
     }
 
     private void Update()
@@ -30,6 +32,7 @@ public class Attack : MonoBehaviour
             SoundManager.Instance.PlaySound(hiss);
             SoundManager.Instance.PlaySound(swipe);
             timeSinceLastAttack = 0f;
+            playerAnim.SetTrigger("Attack");
             Collider2D hit = Physics2D.OverlapBox(new Vector2(transform.position.x + ((attackRange / 2f) * (playerMovement.IsFacingRight ? 1f : -1f)), transform.position.y), new Vector2(attackRange, 2f), 0, enemyMask);
             if (hit)
             {

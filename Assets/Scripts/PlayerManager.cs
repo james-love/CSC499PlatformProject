@@ -1,6 +1,8 @@
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
 using Image = UnityEngine.UI.Image;
@@ -35,12 +37,7 @@ public class PlayerManager : MonoBehaviour
         currentHearts = Mathf.Clamp(currentHearts + adjustment, 0, maxHearts);
 
         if (currentHearts == 0)
-        {
-            //TODO Death animation
-            Time.timeScale = 0;
-            SoundManager.Instance.PlaySound(death);
-            deathScreen.rootVisualElement.style.display = DisplayStyle.Flex;
-        }
+            StartCoroutine(DeathAnimation());
 
         return currentHearts;
     }
@@ -60,6 +57,24 @@ public class PlayerManager : MonoBehaviour
     {
         interactPopupText.SetText(newValue);
         LayoutRebuilder.ForceRebuildLayoutImmediate(interactPopupContainer.GetComponent<RectTransform>());
+    }
+
+    private IEnumerator DeathAnimation()
+    {
+        SoundManager.Instance.PlaySound(death);
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        Animator playerAnim = player.GetComponentInChildren<Animator>();
+        player.GetComponentInChildren<PlayerInput>().currentActionMap.Disable();
+        playerAnim.SetTrigger("Death");
+        yield return new WaitUntil(() => AnimationFinished(playerAnim, "jimmy_dies"));
+        Time.timeScale = 0;
+        deathScreen.rootVisualElement.style.display = DisplayStyle.Flex;
+    }
+
+    private bool AnimationFinished(Animator animator, string animation)
+    {
+        return animator.GetCurrentAnimatorStateInfo(0).IsName(animation) &&
+            animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1;
     }
 
     private void Awake()

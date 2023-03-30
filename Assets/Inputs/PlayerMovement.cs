@@ -29,6 +29,8 @@ public class PlayerMovement : MonoBehaviour
 
     private Rigidbody2D rb;
     private CircleCollider2D col;
+    private Animator playerAnim;
+    private SpriteRenderer playerSprite;
 
     private float gravityScale;
     private float jumpForce;
@@ -66,9 +68,14 @@ public class PlayerMovement : MonoBehaviour
     public void Move(CallbackContext context)
     {
         if (context.started)
+        {
             inputDirection = context.ReadValue<float>();
+            playerSprite.flipX = inputDirection < 0;
+        }
         else if (context.canceled)
+        {
             inputDirection = 0f;
+        }
     }
 
     public void Jump(CallbackContext context)
@@ -91,6 +98,8 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<CircleCollider2D>();
+        playerAnim = GetComponentInChildren<Animator>();
+        playerSprite = GetComponentInChildren<SpriteRenderer>();
 
         float gravityStrength = -(2 * jumpHeight) / (timeToApex * timeToApex);
         gravityScale = gravityStrength / Physics2D.gravity.y;
@@ -116,6 +125,9 @@ public class PlayerMovement : MonoBehaviour
         GroundedCheck();
         JumpCheck();
         GravityCheck();
+
+        playerAnim.SetBool("Running", IsModifiedRunning && inputDirection != 0f);
+        playerAnim.SetBool("Moving", inputDirection != 0f);
     }
 
     private void FixedUpdate()
