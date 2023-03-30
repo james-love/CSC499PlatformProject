@@ -22,13 +22,13 @@ public class RatNPC : Interactable
 
         if(dialogStep == 0)
         {
-            dialogRenders[0].enabled = true;
+            dialog[0].SetActive(true);
             dialogStep += 1;
         }
         else
         {
-            dialogRenders[dialogStep - 1].enabled = false;
-            dialogRenders[dialogStep].enabled = true;
+            dialog[dialogStep - 1].SetActive(false);
+            dialog[dialogStep].SetActive(true);
             dialogStep += 1;
         }
     }
@@ -37,8 +37,7 @@ public class RatNPC : Interactable
     {
         foreach (GameObject bubble in dialog)
         {
-            dialogRenders.Add(bubble.GetComponent<SpriteRenderer>());
-            bubble.GetComponent<SpriteRenderer>().enabled = false;
+            bubble.SetActive(false);
         }
     }
 
