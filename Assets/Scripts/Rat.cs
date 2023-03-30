@@ -14,6 +14,8 @@ public class Rat : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         graphics = GetComponentInChildren<SpriteRenderer>();
+        if (Random.value < 0.5)
+            graphics.GetComponent<Animator>().SetTrigger("PlayAltWalk");
     }
 
     private void Update()
